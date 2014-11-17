@@ -24,7 +24,13 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CharacterBase.h">
+    <ClInclude Include="Character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCharacter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NonPlayerCharacter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +41,13 @@
     <ClCompile Include="CharacterProject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CharacterBase.cpp">
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCharacter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NonPlayerCharacter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

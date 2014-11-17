@@ -2,16 +2,22 @@
 //
 
 #include "stdafx.h"
-#include "CharacterBase.h"
+#include "Character.h"
+#include "PlayerCharacter.h"
+#include "NonPlayerCharacter.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	CharacterBase *cb = new CharacterBase();
-	CharacterBase *cb2 = new CharacterBase(1,2,3,"bob");
-	CharacterBase *cb3 = new CharacterBase("normal");
-	CharacterBase *cb4 = new CharacterBase("fighter");
-	CharacterBase *cb5 = new CharacterBase("wizard");
-	CharacterBase *cb6 = new CharacterBase("i match nobody...");
+	PlayerCharacter pc = PlayerCharacter("Bob");
+	pc.setStrength(2);
+	PlayerCharacter pc2 = PlayerCharacter();
+	pc2.setStrength(3);
+	NonPlayerCharacter npc = NonPlayerCharacter();
+	npc.setStrength(4);
+	if(pc < pc2 )
+	{
+		cout<<"dude";
+	}
 
 	return 0;
 }

@@ -4,29 +4,35 @@
 
 using namespace std;
 
-class CharacterBase
+class Character
 {
 public:
 	//the CLASS! is CharacterBase, ***IF THERE IS A FUNCTION NAMED EXACTLY THE SAME AS THE CLASS*** this incicates the
 	//constructor!!!
 	//notice this "class CharacterBase" and "CharacterBase()"
 	//these are the same
-	CharacterBase();
-	
-
+	Character();
 	//an overloaded constructor!
-	CharacterBase(int s, int w, int i, string n);
-
-	CharacterBase(string t);
-
+	Character(int strength, int dexterity, int charisma, int hitpoints);
+	Character(string type);
 	//the little ~ indicates the function name of the destructor.
-	~CharacterBase();
+	~Character();
 
-	int Str;
-	int Int;
-	int Wis;
-	string Name;
-protected:
+	int Strength;
+	int Dexterity;
+	int Charisma;
+	int HitPoints;
+	
+	void setStrength(int inputStrength);
+	void setDexterity(int inputDexterity);
+	void setCharisma(int inputCharisma);
+	void setHitPoints(int inputHitPoints);
+	
+	int getStrength();
+	int getDexterity();
+	int getCharisma();
+	int getHitPoints();
+
 	//function signature is always three parts!!!
 	//first part is the return type...
 	//this means what you GET out of a function...
@@ -66,4 +72,8 @@ protected:
 	//this .h "makes the entries in the dictionary" or they sort of pre-defines them
 	//go to the cpp files for more info.
 
+	bool operator<(const Character& other);
+
+
 };//i forget this last ;
+
